@@ -2,7 +2,7 @@
 
 ## Tabla de contenido
 
-- [Ingeniería](#ingeniería)
-  - [FrontEnd](#frontend)
-    - [Escuela de Desarrollo Web](#escuela-de-desarrollo-web)
+- Ingeniería
+  - FrontEnd
+    - Escuela de Desarrollo Web
       - [Optimización_web](INGENIERIA/FRONTEND/Escuela_de_Desarrollo_Web/Optimización_web/README.md)
