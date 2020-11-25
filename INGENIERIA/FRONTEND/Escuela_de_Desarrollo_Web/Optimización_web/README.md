@@ -5,97 +5,98 @@ Estos son los slides del profesor: [link](https://static.platzi.com/media/public
 ## Tabla de contenido
 
 - [Curso de Optimización Web](#curso-de-optimización-web)
+  - [Tabla de contenido](#tabla-de-contenido)
   - [1. Entendiendo el rendimiento](#1-entendiendo-el-rendimiento)
-  - [1.1 ¿Vale el esfuerzo optimizar un sitio web?](#11-vale-el-esfuerzo-optimizar-un-sitio-web)
-    - [Web Performance](#web-performance)
-  - [1.2 ¿Cuándo realmente un sitio es rápido o lento?](#12-cuándo-realmente-un-sitio-es-rápido-o-lento)
+    - [1.1 ¿Vale el esfuerzo optimizar un sitio web?](#11-vale-el-esfuerzo-optimizar-un-sitio-web)
+      - [Web Performance](#web-performance)
+    - [1.2 ¿Cuándo realmente un sitio es rápido o lento?](#12-cuándo-realmente-un-sitio-es-rápido-o-lento)
   - [2. Antes de optimizar...](#2-antes-de-optimizar)
-  - [2.1 Aprendiendo a medir](#21-aprendiendo-a-medir)
-    - [Enláces de interés](#enláces-de-interés)
-  - [2.2 User Performance Metrics](#22-user-performance-metrics)
-    - [Web Vital](#web-vital)
-    - [**LCP**: Larget Contentful Paint](#lcp-larget-contentful-paint)
-      - [Tiempos LCP](#tiempos-lcp)
-    - [**FID**: First Input Delay (Demora del primer input)](#fid-first-input-delay-demora-del-primer-input)
-      - [Tiempos FID](#tiempos-fid)
-    - [**CLS**: Cumulative Layout Shift (Acumulaciones en los altos de los elementos)](#cls-cumulative-layout-shift-acumulaciones-en-los-altos-de-los-elementos)
-      - [Tiempos CLS](#tiempos-cls)
-    - [Enlaces de Interés](#enlaces-de-interés)
-  - [2.3 Nuestro Proyecto](#23-nuestro-proyecto)
+    - [2.1 Aprendiendo a medir](#21-aprendiendo-a-medir)
+      - [Enláces de interés](#enláces-de-interés)
+    - [2.2 User Performance Metrics](#22-user-performance-metrics)
+      - [Web Vital](#web-vital)
+      - [**LCP**: Larget Contentful Paint](#lcp-larget-contentful-paint)
+        - [Tiempos LCP](#tiempos-lcp)
+      - [**FID**: First Input Delay (Demora del primer input)](#fid-first-input-delay-demora-del-primer-input)
+        - [Tiempos FID](#tiempos-fid)
+      - [**CLS**: Cumulative Layout Shift (Acumulaciones en los altos de los elementos)](#cls-cumulative-layout-shift-acumulaciones-en-los-altos-de-los-elementos)
+        - [Tiempos CLS](#tiempos-cls)
+      - [Enlaces de Interés](#enlaces-de-interés)
+    - [2.3 Nuestro Proyecto](#23-nuestro-proyecto)
   - [3. Crítical Rendering Path](#3-crítical-rendering-path)
-  - [3.1 Etapas de render del navegador](#31-etapas-de-render-del-navegador)
-  - [3.2 Network waterfall y recursos que bloquean el navegador](#32-network-waterfall-y-recursos-que-bloquean-el-navegador)
-  - [3.3 Priorización de recursos](#33-priorización-de-recursos)
-  - [3.4 Preloading y prefetching de recursos](#34-preloading-y-prefetching-de-recursos)
-  - [3.5 Fases Paint y Layout del Critical Render Path](#35-fases-paint-y-layout-del-critical-render-path)
+    - [3.1 Etapas de render del navegador](#31-etapas-de-render-del-navegador)
+    - [3.2 Network waterfall y recursos que bloquean el navegador](#32-network-waterfall-y-recursos-que-bloquean-el-navegador)
+    - [3.3 Priorización de recursos](#33-priorización-de-recursos)
+    - [3.4 Preloading y prefetching de recursos](#34-preloading-y-prefetching-de-recursos)
+    - [3.5 Fases Paint y Layout del Critical Render Path](#35-fases-paint-y-layout-del-critical-render-path)
   - [4. CSS](#4-css)
-  - [4.1 Detectando Paints costosos y optimizando animaciones](#41-detectando-paints-costosos-y-optimizando-animaciones)
-  - [4.2 Bloqueos y complejidad en selectores](#42-bloqueos-y-complejidad-en-selectores)
-    - [Enlaces de interés](#enlaces-de-interés-1)
+    - [4.1 Detectando Paints costosos y optimizando animaciones](#41-detectando-paints-costosos-y-optimizando-animaciones)
+    - [4.2 Bloqueos y complejidad en selectores](#42-bloqueos-y-complejidad-en-selectores)
+      - [Enlaces de interés](#enlaces-de-interés-1)
   - [5. WebFonts](#5-webfonts)
-  - [5.1 WebFonts y su impacto en rendimiento](#51-webfonts-y-su-impacto-en-rendimiento)
-    - [WebFontLoader](#webfontloader)
-    - [Enlaces de Interés Webfonts](#enlaces-de-interés-webfonts)
+    - [5.1 WebFonts y su impacto en rendimiento](#51-webfonts-y-su-impacto-en-rendimiento)
+      - [WebFontLoader](#webfontloader)
+      - [Enlaces de Interés Webfonts](#enlaces-de-interés-webfonts)
   - [6. Imágenes, Iconos y SVG](#6-imágenes-iconos-y-svg)
-  - [6.1 Imágenes, formato y compresión](#61-imágenes-formato-y-compresión)
-    - [Reducir peso de imágenes](#reducir-peso-de-imágenes)
-    - [Formatos de compresión](#formatos-de-compresión)
-    - [GIF](#gif)
-    - [PNG-8](#png-8)
-    - [PNG-24](#png-24)
-    - [JPG o JPEG](#jpg-o-jpeg)
-    - [Identificando oportunidades con imágenes en el proyecto](#identificando-oportunidades-con-imágenes-en-el-proyecto)
-  - [6.2 Imágenes y compresión](#62-imágenes-y-compresión)
-    - [API](#api)
-    - [Webp](#webp)
-  - [6.3 WebFont, Imagen o SVG](#63-webfont-imagen-o-svg)
-    - [WebFonts](#webfonts)
-    - [SVG](#svg)
-  - [6.4 Técnicas avanzadas con Lazy Loading](#64-técnicas-avanzadas-con-lazy-loading)
-    - [Implementación](#implementación)
-      - [De forma nativa](#de-forma-nativa)
-      - [Intersection Observer](#intersection-observer)
-      - [A la antigua: Scroll listener](#a-la-antigua-scroll-listener)
-    - [Enlaces de interés](#enlaces-de-interés-2)
-  - [6.5 Técnicas avanzadas con Responsive Loading](#65-técnicas-avanzadas-con-responsive-loading)
-    - [Gatsby: Caso de estudio](#gatsby-caso-de-estudio)
-    - [enlaces de interes 6.5](#enlaces-de-interes-65)
+    - [6.1 Imágenes, formato y compresión](#61-imágenes-formato-y-compresión)
+      - [Reducir peso de imágenes](#reducir-peso-de-imágenes)
+      - [Formatos de compresión](#formatos-de-compresión)
+      - [GIF](#gif)
+      - [PNG-8](#png-8)
+      - [PNG-24](#png-24)
+      - [JPG o JPEG](#jpg-o-jpeg)
+      - [Identificando oportunidades con imágenes en el proyecto](#identificando-oportunidades-con-imágenes-en-el-proyecto)
+    - [6.2 Imágenes y compresión](#62-imágenes-y-compresión)
+      - [API](#api)
+      - [Webp](#webp)
+    - [6.3 WebFont, Imagen o SVG](#63-webfont-imagen-o-svg)
+      - [WebFonts](#webfonts)
+      - [SVG](#svg)
+    - [6.4 Técnicas avanzadas con Lazy Loading](#64-técnicas-avanzadas-con-lazy-loading)
+      - [Implementación](#implementación)
+        - [De forma nativa](#de-forma-nativa)
+        - [Intersection Observer](#intersection-observer)
+        - [A la antigua: Scroll listener](#a-la-antigua-scroll-listener)
+      - [Enlaces de interés](#enlaces-de-interés-2)
+    - [6.5 Técnicas avanzadas con Responsive Loading](#65-técnicas-avanzadas-con-responsive-loading)
+      - [Gatsby: Caso de estudio](#gatsby-caso-de-estudio)
+      - [enlaces de interes 6.5](#enlaces-de-interes-65)
   - [7. Aplicaciones JavaScript](#7-aplicaciones-javascript)
-  - [7.1 JavaScript y aplicaciones modernas y Utilizando un servidor de producción](#71-javascript-y-aplicaciones-modernas-y-utilizando-un-servidor-de-producción)
-  - [7.2 Analizando el bundle de la aplicación](#72-analizando-el-bundle-de-la-aplicación)
-    - [Enlaces de interés 7.2](#enlaces-de-interés-72)
-  - [7.3 Reduciendo el tamaño del bundle](#73-reduciendo-el-tamaño-del-bundle)
-    - [Enlaces de interés 7.3](#enlaces-de-interés-73)
-  - [7.4 Code Splitting](#74-code-splitting)
-    - [Enlaces de interés 7.4](#enlaces-de-interés-74)
-  - [7.5 Lazy Module Loading](#75-lazy-module-loading)
-    - [Enlaces de interés 7.5](#enlaces-de-interés-75)
-  - [7.6 Llevando los listeners a otro nivel](#76-llevando-los-listeners-a-otro-nivel)
-    - [Enlaces de interés 7.6](#enlaces-de-interés-76)
-  - [7.7 Instalando Modal video](#77-instalando-modal-video)
-  - [7.8 Lazy loading del modal](#78-lazy-loading-del-modal)
-    - [Enlaces de interes 7.8](#enlaces-de-interes-78)
-  - [7.9 Moviendo la carga de rendering hacia el servidor: Server Side Rendering](#79-moviendo-la-carga-de-rendering-hacia-el-servidor-server-side-rendering)
-  - [7.10 Aplicando SSR](#710-aplicando-ssr)
-  - [7.11 Pre-renderizando el contenido: Static Generation](#711-pre-renderizando-el-contenido-static-generation)
+    - [7.1 JavaScript y aplicaciones modernas y Utilizando un servidor de producción](#71-javascript-y-aplicaciones-modernas-y-utilizando-un-servidor-de-producción)
+    - [7.2 Analizando el bundle de la aplicación](#72-analizando-el-bundle-de-la-aplicación)
+      - [Enlaces de interés 7.2](#enlaces-de-interés-72)
+    - [7.3 Reduciendo el tamaño del bundle](#73-reduciendo-el-tamaño-del-bundle)
+      - [Enlaces de interés 7.3](#enlaces-de-interés-73)
+    - [7.4 Code Splitting](#74-code-splitting)
+      - [Enlaces de interés 7.4](#enlaces-de-interés-74)
+    - [7.5 Lazy Module Loading](#75-lazy-module-loading)
+      - [Enlaces de interés 7.5](#enlaces-de-interés-75)
+    - [7.6 Llevando los listeners a otro nivel](#76-llevando-los-listeners-a-otro-nivel)
+      - [Enlaces de interés 7.6](#enlaces-de-interés-76)
+    - [7.7 Instalando Modal video](#77-instalando-modal-video)
+    - [7.8 Lazy loading del modal](#78-lazy-loading-del-modal)
+      - [Enlaces de interes 7.8](#enlaces-de-interes-78)
+    - [7.9 Moviendo la carga de rendering hacia el servidor: Server Side Rendering](#79-moviendo-la-carga-de-rendering-hacia-el-servidor-server-side-rendering)
+    - [7.10 Aplicando SSR](#710-aplicando-ssr)
+    - [7.11 Pre-renderizando el contenido: Static Generation](#711-pre-renderizando-el-contenido-static-generation)
   - [8. Caché](#8-caché)
-  - [8.1 Cómo funciona el Caché de recursos y CDN](#81-cómo-funciona-el-caché-de-recursos-y-cdn)
-  - [8.2 Deploy en Netlify y automatización de contenido en GitHub Actions](#82-deploy-en-netlify-y-automatización-de-contenido-en-github-actions)
-  - [8.3 Aplicando GitHub Actions](#83-aplicando-github-actions)
-    - [Enlaces de interés 8.2](#enlaces-de-interés-82)
-  - [8.4 Interceptando los requests del navegador con Service Workers](#84-interceptando-los-requests-del-navegador-con-service-workers)
-    - [Otros usos](#otros-usos)
-    - [Enlaces de interés 8.3](#enlaces-de-interés-83)
+    - [8.1 Cómo funciona el Caché de recursos y CDN](#81-cómo-funciona-el-caché-de-recursos-y-cdn)
+    - [8.2 Deploy en Netlify y automatización de contenido en GitHub Actions](#82-deploy-en-netlify-y-automatización-de-contenido-en-github-actions)
+    - [8.3 Aplicando GitHub Actions](#83-aplicando-github-actions)
+      - [Enlaces de interés 8.2](#enlaces-de-interés-82)
+    - [8.4 Interceptando los requests del navegador con Service Workers](#84-interceptando-los-requests-del-navegador-con-service-workers)
+      - [Otros usos](#otros-usos)
+      - [Enlaces de interés 8.3](#enlaces-de-interés-83)
   - [9. Performance Budget](#9-performance-budget)
-  - [9.1 Performance budget y auditorias automatizadas](#91-performance-budget-y-auditorias-automatizadas)
-    - [Enlaces de interés 9.1](#enlaces-de-interés-91)
-  - [9.2 Automatizando una auditoria con Lighthouse CI](#92-automatizando-una-auditoria-con-lighthouse-ci)
-  - [9.3 Medidas reales y monitoreo constante](#93-medidas-reales-y-monitoreo-constante)
-    - [Enlaces de Interés 9.3](#enlaces-de-interés-93)
+    - [9.1 Performance budget y auditorias automatizadas](#91-performance-budget-y-auditorias-automatizadas)
+      - [Enlaces de interés 9.1](#enlaces-de-interés-91)
+    - [9.2 Automatizando una auditoria con Lighthouse CI](#92-automatizando-una-auditoria-con-lighthouse-ci)
+    - [9.3 Medidas reales y monitoreo constante](#93-medidas-reales-y-monitoreo-constante)
+      - [Enlaces de Interés 9.3](#enlaces-de-interés-93)
 
 ## 1. Entendiendo el rendimiento
 
-## 1.1 ¿Vale el esfuerzo optimizar un sitio web?
+### 1.1 ¿Vale el esfuerzo optimizar un sitio web?
 
 Caso Amazon
 
@@ -116,7 +117,7 @@ El acceso qeu se habla aquí no es en desktop con fibra óptica, es el de un cel
 
 Por esto hay que saber cuánto tarda nuestro sitio y cuánto vale esto para la empresa.
 
-### Web Performance
+#### Web Performance
 
 La optimización web:
 
@@ -134,7 +135,7 @@ Más recursos sobre por qué tener en cuenta la optimización web:
 
 1. [web.dev/why-speed-matters](https://developers.google.com/web/fundamentals/performance/why-performance-matters)
 
-## 1.2 ¿Cuándo realmente un sitio es rápido o lento?
+### 1.2 ¿Cuándo realmente un sitio es rápido o lento?
 
 Lento o Rápido son términos subjetivos que no es igual por cada persona, por lo que Google creó un modelo llamado RAIL que se basa en la **respuesta**, **animación**, **tiempo muerto** y tiempo de **carga**.
 
@@ -166,7 +167,7 @@ Documentación oficial de RAIL [web.dev/rail](https://web.dev/rail/)
 
 ## 2. Antes de optimizar...
 
-## 2.1 Aprendiendo a medir
+### 2.1 Aprendiendo a medir
 
 Antes de empezar a optimizar es aprender a medir. Lo que se no mide, no se mejora.
 
@@ -192,20 +193,20 @@ En la segunda imagen se ve una página que carga en 1 segundo.
 
 Ambas tienen el mismo tiempo de carga, pero ¿Cuál es mejor?. **La optimización se trata de la Experiencia del Usuario**. El tiempo puede que sea un número más, pero no refleje la experiencia del usuario.
 
-### Enláces de interés
+#### Enláces de interés
 
 * [Monitorizar el performance](https://www.pingdom.com/)
 * [Testear el performance de un sitio](https://webpagetest.org/)
 
-## 2.2 User Performance Metrics
+### 2.2 User Performance Metrics
 
-### Web Vital
+#### Web Vital
 
-### **LCP**: Larget Contentful Paint
+#### **LCP**: Larget Contentful Paint
 
 El tiempo que tarda en pintar el mayor elemento visible en la ventana. Se trata de la CARGA.
 
-#### Tiempos LCP
+##### Tiempos LCP
 
 BIEN: 0s - 2.5s
 
@@ -213,13 +214,13 @@ Necesita Mejora: 2.5s - 4.0s
 
 DEFICIENTE: Mayor de 4.0s
 
-### **FID**: First Input Delay (Demora del primer input)
+#### **FID**: First Input Delay (Demora del primer input)
 
 El tiempo que tarda la página en responder a las acciones del usuario. Se trata de la INTERACTIVIDAD.
 
 El FID mide por el **mayor tiempo de respuesta**.
 
-#### Tiempos FID
+##### Tiempos FID
 
 BIEN: 0ms - 100ms
 
@@ -227,11 +228,11 @@ Necesita Mejora: 100ms - 300ms
 
 Deficiente: Mayor de 300ms
 
-### **CLS**: Cumulative Layout Shift (Acumulaciones en los altos de los elementos)
+#### **CLS**: Cumulative Layout Shift (Acumulaciones en los altos de los elementos)
 
 Mide todos los cambios inesperados en el layout de una página. Se trata de la ESTABILIDAD.
 
-#### Tiempos CLS
+##### Tiempos CLS
 
 BIEN: 0 - 0.1
 
@@ -239,11 +240,11 @@ Necesita Mejora: 0.1 - 0.25
 
 Deficiente: Mayor de 0.25
 
-### Enlaces de Interés
+#### Enlaces de Interés
 
 [web.dev/vitals](https://web.dev/vitals/)
 
-## 2.3 Nuestro Proyecto
+### 2.3 Nuestro Proyecto
 
 El [enlace del proyecto del curso](https://github.com/jonalvarezz/platzi-optimizacion-web)
 
@@ -259,7 +260,7 @@ git checkout -b tuNombre-inicio 0-inicio
 
 ## 3. Crítical Rendering Path
 
-## 3.1 Etapas de render del navegador
+### 3.1 Etapas de render del navegador
 
 Flujo del Critical Render Path
 
@@ -267,7 +268,7 @@ Flujo del Critical Render Path
 
 Animación del Crítical Render Path [link](https://twitter.com/lydiahallie/status/1231255327032541185?s=20)
 
-## 3.2 Network waterfall y recursos que bloquean el navegador
+### 3.2 Network waterfall y recursos que bloquean el navegador
 
 Los archivos JS y CSS son archivos bloqueantes del HTML, por lo que tenemos que saber cómo manejarlos. Primero veremos el JS.
 
@@ -282,7 +283,7 @@ Enlaces de interés
 
 * [Blog Digital Ocean](https://www.digitalocean.com/community/tutorials/html-defer-async)
 
-## 3.3 Priorización de recursos
+### 3.3 Priorización de recursos
 
 No todos los recursos tienen la misma prioridad. Piensa en el CSS de mobile, tablet y desktop. Lo usual es colocar todo ese código en un solo archivo.
 
@@ -296,7 +297,7 @@ En la página web del profesor, se utiliza este método para el tema oscuro: [jo
 <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="/css/dark.css" />
 ```
 
-## 3.4 Preloading y prefetching de recursos
+### 3.4 Preloading y prefetching de recursos
 
 Estrategias para endicarle los recursos que se deben de descargar de forma anticipada.
 
@@ -310,7 +311,7 @@ Un caso curioso de lo que hace NextJS es que hace `prefetch cache` al hacer hove
 
 En nuestro proyecto utilizamos tres dominios externos: google fonts, unpkg para solucionar un polyfill y la api kitsu.
 
-## 3.5 Fases Paint y Layout del Critical Render Path
+### 3.5 Fases Paint y Layout del Critical Render Path
 
 Cualquier cambio en una propiedad que no sea _opacity_ o _transform_, genera un Paint.
 
@@ -320,7 +321,7 @@ Tanto es esto que Facebook con su ultimo diseño, decidieron no utilizar `box-sh
 
 ## 4. CSS
 
-## 4.1 Detectando Paints costosos y optimizando animaciones
+### 4.1 Detectando Paints costosos y optimizando animaciones
 
 Hay que tener en cuenta que toda propiedad que no sea opacity y transform genera un nuevo Paint. Por lo que vamos a intentar que toda animación se muevan por estas propiedades.
 
@@ -370,7 +371,7 @@ Enlaces de interés:
 3. https://csstriggers.com/
 4. https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
 
-## 4.2 Bloqueos y complejidad en selectores
+### 4.2 Bloqueos y complejidad en selectores
 
 Entre menos selectores se tenga, mejor para el navegador.
 
@@ -378,7 +379,7 @@ Para solucionar esto es muy útil la metodología BEM.
 
 Solo se deben de usar: 1 Selector, 1 clase y los Id se evitan.
 
-### Enlaces de interés
+#### Enlaces de interés
 
 * Critical CSS: Ese es el nombre de la técnica y también del paquete. https://github.com/addyosmani/critical
 * https://tachyons.io/
@@ -386,7 +387,7 @@ Solo se deben de usar: 1 Selector, 1 clase y los Id se evitan.
 
 ## 5. WebFonts
 
-## 5.1 WebFonts y su impacto en rendimiento
+### 5.1 WebFonts y su impacto en rendimiento
 
 Los webFonts atacan tanto al rendimiento que todos dicen que como máximo se debe de tener 2 tipos de fuentes, pero si puedes, solo ten 1 y lo mejor para el rendimiento es utilizar ninguno. Este último es múy difícil, por lo que hay 3 formas para solucionar esto y por lo tanto, 3 nuevos problemas a que enfrentarse.
 
@@ -407,7 +408,7 @@ Pero si no se está utilizando, podemos usar [WebFontLoader](https://github.com/
 
 Se recomienda que no se utilice el **Flash Of Invisible Text** porque no se alinea con la experiencia del usuario, ya que hay que esperar a que se descargue las fuentes para consumir el servicio.
 
-### WebFontLoader
+#### WebFontLoader
 
 En el html, colocar al final del body
 
@@ -433,20 +434,20 @@ html.wf-active {
 }
 ```
 
-### Enlaces de Interés Webfonts
+#### Enlaces de Interés Webfonts
 
 * https://www.zachleat.com/web/css-tricks-web-fonts/
 * https://github.com/typekit/webfontloader
 
 ## 6. Imágenes, Iconos y SVG
 
-## 6.1 Imágenes, formato y compresión
+### 6.1 Imágenes, formato y compresión
 
 Comprimir imágenes es la forma más fácil y segura de reducir el tamaño de una página.
 
 El peso sugerido de las imagenes es de 70kb
 
-### Reducir peso de imágenes
+#### Reducir peso de imágenes
 
 Online
 
@@ -465,7 +466,7 @@ Dev Flow
 * Gulp
 * post-commit
 
-### Formatos de compresión
+#### Formatos de compresión
 
 Lo mas populares
 
@@ -473,26 +474,26 @@ Lo mas populares
 * PNG (y PNG-8)
 * JPG
 
-### GIF
+#### GIF
 
 * Animaciones
 * 256 colores
 * No degradados
 * Perfecto cuando hay pocos colores, colores planos y sin transparencia.
 
-### PNG-8
+#### PNG-8
 
 GIF + Transparencias
 
 Perfecto para íconos y algunos logos.
 
-### PNG-24
+#### PNG-24
 
 PNG-8 + Colores ilimitados
 
 Imágenes con defradados o muchos colores con transparencia.
 
-### JPG o JPEG
+#### JPG o JPEG
 
 Fotos
 
@@ -504,7 +505,7 @@ Tiene el formato Progresivo, cuando se presenta una versión de baja resolución
 
 Siempre hay que preferir por usar JPG progresivo.
 
-### Identificando oportunidades con imágenes en el proyecto
+#### Identificando oportunidades con imágenes en el proyecto
 
 El logo que se utiliza es muchísimo mas grande. Por lo que vamos a:
 
@@ -513,19 +514,19 @@ El logo que se utiliza es muchísimo mas grande. Por lo que vamos a:
 2. Reducir peso
    1. [tinypng.com](https://tinypng.com/)
 
-## 6.2 Imágenes y compresión
+### 6.2 Imágenes y compresión
 
-### API
+#### API
 
 Para el caso de las consultas API, debemos de apoyarnos completamente de las consultas API, por ejemplo, si se tiene varias opciones de imágenes, se debe de escoger la que mejor se adapte.
 
-### Webp
+#### Webp
 
 Este es un mucho mejor formato de imagen, pero aún no es recomendable usarlo ya que aún no lo soportan todos los navegadores. Por lo que se debe de tener un ojo encima por si el percentil de soporte de navegadores sube. [caniuse](https://caniuse.com/#feat=webp)
 
-## 6.3 WebFont, Imagen o SVG
+### 6.3 WebFont, Imagen o SVG
 
-### WebFonts
+#### WebFonts
 
 Goods
 
@@ -540,7 +541,7 @@ Bads
 3. Bloqueantes
 4. No son muy Accesible para los usuarios
 
-### SVG
+#### SVG
 
 Goods
 
@@ -563,13 +564,13 @@ Bads
 3. Ilustraciones animadas
 4. En general: gráficos de los que puedas mantener un fácil control.
 
-## 6.4 Técnicas avanzadas con Lazy Loading
+### 6.4 Técnicas avanzadas con Lazy Loading
 
 LazyLoading es la carga de imagenes muy similar al JPG progrsivo, pero con la diferencia que esta está desenfocada y pixeleada al comienzo.
 
-### Implementación
+#### Implementación
 
-#### De forma nativa
+##### De forma nativa
 
 ```html
 <img src="gatico.png" landing="lazy" alt="" />
@@ -586,7 +587,7 @@ Bads
 
 * Poco Soporte. Al ser una opción nueva, no es recomendable usarlo.
 
-#### Intersection Observer
+##### Intersection Observer
 
 Goods
 
@@ -602,7 +603,7 @@ Bads
 
 Intersection Observer v1 tiene un buen soporte, más la versión 2, no lo tiene.
 
-#### A la antigua: Scroll listener
+##### A la antigua: Scroll listener
 
 Goods
 
@@ -613,13 +614,13 @@ Bads
 * Scroll listener
 * Muchos cálculos por evento
 
-### Enlaces de interés
+#### Enlaces de interés
 
 [Librería de LazyLoad](https://github.com/ApoorvSaxena/lozad.js)
 
 Otra Librería para aplicar Lazy Loading [github.com/aFarkas/lazysizes](https://github.com/aFarkas/lazysizes)
 
-## 6.5 Técnicas avanzadas con Responsive Loading
+### 6.5 Técnicas avanzadas con Responsive Loading
 
 Responde al caso de:
 
@@ -629,13 +630,13 @@ Si bien ambos acceden al mismo recurso y sitio web, estos tienen experiencias co
 
 Cómo ayudamos a que nuestros usuarios tengan la mejor imagen sin importar su conexión y dispositivo.
 
-### Gatsby: Caso de estudio
+#### Gatsby: Caso de estudio
 
 Analicemos técnicamente una imagen en Gatsby
 
 Gatsby utiliza el tag de `<picture>`, `source` y `img` para colocar una imagen. En la etiqueta `source` y `img` se puede definir qué imagen se debe de utilizar para qué tamaño de ventana.
 
-### enlaces de interes 6.5
+#### enlaces de interes 6.5
 
 [gatsby](https://www.gatsbyjs.com/showcase/)
 
@@ -643,7 +644,7 @@ Gatsby utiliza el tag de `<picture>`, `source` y `img` para colocar una imagen. 
 
 ## 7. Aplicaciones JavaScript
 
-## 7.1 JavaScript y aplicaciones modernas y Utilizando un servidor de producción
+### 7.1 JavaScript y aplicaciones modernas y Utilizando un servidor de producción
 
 Una página web moderna promedio tiene un peso de 350kb en javascript, mayor de 1MB sin comprimir y 15 segundos hasta interacción.
 
@@ -663,7 +664,7 @@ Para este último podemos utilizar la librería serve. Lo podemos instalar con `
 
 El punto es referente al lugar del archivo html
 
-## 7.2 Analizando el bundle de la aplicación
+### 7.2 Analizando el bundle de la aplicación
 
 Con `Webpack-bundle-analyzer` se puede analizar los paquetes de webpack que están instalados.
 
@@ -713,13 +714,13 @@ En package.json
 }
 ```
 
-### Enlaces de interés 7.2
+#### Enlaces de interés 7.2
 
 [bundlephobia.com](https://bundlephobia.com/) Página web que te dice el peso de los paquetes npm.
 
 [NextJS Documentacion](https://github.com/vercel/next.js/tree/canary/examples/analyze-bundles)
 
-## 7.3 Reduciendo el tamaño del bundle
+### 7.3 Reduciendo el tamaño del bundle
 
 Con [bundlephobia.com](https://bundlephobia.com/) podemos visualizar el tamaño de los paquetes.
 
@@ -732,11 +733,11 @@ Se debe de inspeccionar que:
 
 Estas herramientas nos ayudan a diagnosticar lo que está sucediendo, pero depende del desarrollador de llevar las aplicaciones lo mejor posible, sabiendo que cada dependencia trae un precio.
 
-### Enlaces de interés 7.3
+#### Enlaces de interés 7.3
 
 [Esta es otra opción a utilizar en vez de moment](https://date-fns.org/)
 
-## 7.4 Code Splitting
+### 7.4 Code Splitting
 
 NextJS y Gatsby utilizan el code splitting para crear mini bundle para cara página del sitio web, así poder mandar exactamente lo que la página necesita.
 
@@ -758,11 +759,11 @@ Esto creará dos archivos javascript. Estos archivos se debe de añadir al html 
 
 Esta técnica es buena ya que podemos colocar el vendor en el caché del navegador.
 
-### Enlaces de interés 7.4
+#### Enlaces de interés 7.4
 
 [Webpack Optimization Doc](https://webpack.js.org/configuration/optimization/)
 
-## 7.5 Lazy Module Loading
+### 7.5 Lazy Module Loading
 
 Hay casos en los que el usuario no necesita en el momento, se puede postergar para el preciso momento que se necesite. No existe librería que tome estas decisiones, por lo que es responsabilidad nuestra es identificar cuales son esas partes del proyecto en que lo podemos aplicar.
 
@@ -803,11 +804,11 @@ allYoutubeLink.forEach((link) => {
 })
 ```
 
-### Enlaces de interés 7.5
+#### Enlaces de interés 7.5
 
 [Ejemplo de Lazy Loading](https://codesandbox.io/s/eloquent-joliot-wcc52?file=/lazy-loading.js)
 
-## 7.6 Llevando los listeners a otro nivel
+### 7.6 Llevando los listeners a otro nivel
 
 La forma de cómo estamos utilizando el event listener no es la mejor, ya que estamos colocando un event listener para cada elemento. Existe otro método que se le coloca un event listener a un elemento padre y este lo propaga a sus elementos hijos, React y Angular son ejemplos de librerías que utilizan esto para mejorar su performance.
 
@@ -842,11 +843,11 @@ export const modalListener = event => {
 
 En carouselItem.js Se debe de agregar un atributo llamado `data-videodd` en el anchor.
 
-### Enlaces de interés 7.6
+#### Enlaces de interés 7.6
 
 ¿Por qué este método es más óptimo aún cuando se está usando más operaciones? Esto es por el [Event delegation](https://javascript.info/event-delegation)
 
-## 7.7 Instalando Modal video
+### 7.7 Instalando Modal video
 
 A este punto ya hemos realizado el paso 1 de la implementación, vamos a proceder a hacer el paso 2.
 
@@ -885,7 +886,7 @@ export const openModal = videoId => {
 }
 ```
 
-## 7.8 Lazy loading del modal
+### 7.8 Lazy loading del modal
 
 En este paso haremos el paso 4 de la implementación. Hemos detectado que la librería modal-video solo se necesita si se da clic al botón.
 
@@ -906,19 +907,19 @@ export const modalListener = event => {
 }
 ```
 
-### Enlaces de interes 7.8
+#### Enlaces de interes 7.8
 
 * [SnowPack](https://www.snowpack.dev/)
 
-## 7.9 Moviendo la carga de rendering hacia el servidor: Server Side Rendering
+### 7.9 Moviendo la carga de rendering hacia el servidor: Server Side Rendering
 
-## 7.10 Aplicando SSR
+### 7.10 Aplicando SSR
 
 Lectura recomendada
 
 https://overreacted.io/es/goodbye-clean-code/
 
-## 7.11 Pre-renderizando el contenido: Static Generation
+### 7.11 Pre-renderizando el contenido: Static Generation
 
 Cuando el servidor hace una petición a la API por cada render es llamado **Server side render On Demand**.
 
@@ -936,9 +937,9 @@ Formas de indicarle al navegador que el recurso ha cambiad: Status 304, e-tag y 
 
 Los CDN, **Content Distributed Network**, es un servicio que lo que hace es tomar el contenido de tu servidor principal que tienes toda la información y replicarlo en servidores por todo el mundo. Esto con el objetivo de **reducir la latencia**.
 
-## 8.1 Cómo funciona el Caché de recursos y CDN
+### 8.1 Cómo funciona el Caché de recursos y CDN
 
-## 8.2 Deploy en Netlify y automatización de contenido en GitHub Actions
+### 8.2 Deploy en Netlify y automatización de contenido en GitHub Actions
 
 El CDN que estudiaremos es Netlify ya que:
 
@@ -957,7 +958,7 @@ Para esto tenemos que hacer:
 2. - [ ] Crear una cuenta en Netlify
 3. - [ ] Netlify - GitHub/GitLab - Repositorio del proyecto
 
-## 8.3 Aplicando GitHub Actions
+### 8.3 Aplicando GitHub Actions
 
 Como lo tenemos en el proyecto, necesitamos actualizar la información de la API cada cierto tiempo, esto lo conseguiremos con [**GitHub Actions**](https://github.com/features/actions).
 
@@ -992,11 +993,11 @@ jobs:
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/5edca83478745263425750d1
 ```
 
-### Enlaces de interés 8.2
+#### Enlaces de interés 8.2
 
 [Coffee Bytes](https://coffeebytes.dev/programa-tus-tareas-periodicas-con-cron-y-crontab-en-gnulinux/)
 
-## 8.4 Interceptando los requests del navegador con Service Workers
+### 8.4 Interceptando los requests del navegador con Service Workers
 
 Para implementar con Service Worker necesitamos:
 
@@ -1063,20 +1064,20 @@ function clearCache(event) {
 }
 ```
 
-### Otros usos
+#### Otros usos
 
 1. **Pre-fetching** de datos que sabes que el usuario puede necesitar en un futuro
 2. Caché
 3. **Offline Experiences** como lo son las PWA
 4. **Background Services** delegar tareas pesadas para que lo haga los Service Workers
 
-### Enlaces de interés 8.3
+#### Enlaces de interés 8.3
 
 [Introducción a los SW](https://developers.google.com/web/fundamentals/primers/service-workers/)
 
 ## 9. Performance Budget
 
-## 9.1 Performance budget y auditorias automatizadas
+### 9.1 Performance budget y auditorias automatizadas
 
 Luego de haber optimizado nuestro sitio, tambien debemos de asegurar que en el paso del tiempo, nuestras optimizaciones se mantengan.
 
@@ -1098,11 +1099,11 @@ Para automatizar esto, podemos pensar en utilizar LightHouse desde la términal,
 
 En este caso usaremos LightHouse CI, GitHub Actions y automatizar cada vez que se haga un Pull Request y confirme que las métricas estén dentro de lo permitido.
 
-### Enlaces de interés 9.1
+#### Enlaces de interés 9.1
 
 [Performance Budgets 101](https://web.dev/performance-budgets-101/)
 
-## 9.2 Automatizando una auditoria con Lighthouse CI
+### 9.2 Automatizando una auditoria con Lighthouse CI
 
 Empezaremos con [GitHub Actions](https://github.com/features/actions) y usaremos un Actions que está en el MarketPlace: Lighthouse CI Action. Esta cuenta con una buena documentación que nos indica cómo podemos implementar las distintas funcionalidades que esta posee, en este caso se usará el de sitios estáticos.
 
@@ -1183,7 +1184,7 @@ Mostrando el reporte en json `npx lighthouse [url] --output json`
 
 Con el json podemos tomar las auditorías y añadir más métricas a `lighthouse-audit.json`.
   
-## 9.3 Medidas reales y monitoreo constante
+### 9.3 Medidas reales y monitoreo constante
 
 Durante todo este tiempo hemos estado haciendo medidas que nos han ayudado con la optimización del sitio, debemos de tener presente que todas esas medidas las hemos tomado desde nuestro computador y siendo nosotros los únicos usuarios. Estos tipos de medidas se les llama **Medidas de Laboratorio**. Son de laboratorio porque tenemos pleno control de lo que está sucediendo y nuestro proyecto está corriendo desde local o desde un servidor. Esto no representa la realidad para nuestros usuarios, es por esto que es tan importante tomar **medidas reales**, porque no sabemos las condiciones con la que se conectan, dispositivos, etc y esto hace que las métricas cambie.
 
@@ -1195,7 +1196,7 @@ Cuando se está dando el proyecto a usuarios reales:
 
 Existen servicios que hacen estas tareas por nosotros, como New Relic o el mismo Google Analytics, que nos ayudan a recopilar los gráficos necesarios para poder tomar decisiones de nuestro sitio.
 
-### Enlaces de Interés 9.3
+#### Enlaces de Interés 9.3
 
 Sitios webs que cubren estos servicios:
 
